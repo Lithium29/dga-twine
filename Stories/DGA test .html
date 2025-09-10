@@ -22083,17 +22083,14 @@ Tipp: Du kannst durch den Konsum von Früchten Leben zurückgewinnen!
 
 &lt;&lt;set $leben=20&gt;&gt;
 [[Versuch&#39;s noch mal! -&gt;Anfang]]</tw-passagedata><tw-passagedata pid="1695" name="ein cooles item" tags="" position="1675,6075" size="100,100">&lt;img src=&quot;img/wizard.jpg&quot; width=&quot;100%&quot;&gt;
-</tw-passagedata><tw-passagedata pid="1696" name="Untitled Passage" tags="" position="400,1700" size="100,100">UI TODOS 
-
-fullscreen button 
-musik frag ob mit oder ohne 
-age rating 
-
-gender warning 
-
-credits  
-
-test</tw-passagedata><tw-passagedata pid="1697" name="StoryInterface" tags="" position="1675,5800" size="100,100">&lt;div class=&quot;header&quot;&gt;
+</tw-passagedata><tw-passagedata pid="1696" name="The Real Beginning " tags="" position="2025,5525" size="100,100">&lt;&lt;textbox &quot;_input&quot; &quot;&quot; autofocus&gt;&gt;&lt;&lt;button &quot;Submit Answer&quot;&gt;&gt;
+	&lt;&lt;if [&quot;lithium&quot;].includes(_input.toLowerCase())&gt;&gt;
+		&lt;&lt;goto &quot;Anfang&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+		&lt;&lt;replace &quot;#output&quot;&gt;&gt;&lt;&lt;= either([&quot;Nope.&quot;, &quot;Try again.&quot;, &quot;Wrong.&quot;])&gt;&gt;&lt;&lt;/replace&gt;&gt;
+	&lt;&lt;/if&gt;&gt;
+&lt;&lt;/button&gt;&gt;
+&lt;span id=&quot;output&quot;&gt;&lt;/span&gt;</tw-passagedata><tw-passagedata pid="1697" name="StoryInterface" tags="" position="1675,5800" size="100,100">&lt;div class=&quot;header&quot;&gt;
 	&lt;div id=&quot;header-text&quot; data-passage=&quot;header-text&quot;&gt;&lt;/div&gt;
 	&lt;div id=&quot;function-menu&quot;&gt;
 		&lt;span id=&quot;settings&quot; class=&quot;lnr lnr-cog&quot;&gt;&lt;/span&gt;
