@@ -1431,14 +1431,16 @@ Say what...?
 &lt;&lt;widget &quot;es&quot;&gt;&gt;&lt;&lt;switch $plural&gt;&gt;&lt;&lt;case true&gt;&gt;&lt;&lt;case false&gt;&gt;es&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
 &lt;&lt;widget &quot;re&quot;&gt;&gt;&lt;&lt;switch $plural&gt;&gt;&lt;&lt;case true&gt;&gt;re&lt;&lt;case false&gt;&gt;s&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;
 &lt;&lt;widget &quot;ve&quot;&gt;&gt;&lt;&lt;switch $plural&gt;&gt;&lt;&lt;case true&gt;&gt;ve&lt;&lt;case false&gt;&gt;s&lt;&lt;/switch&gt;&gt;&lt;&lt;/widget&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="stats" tags="noreturn" position="100,400" size="100,100">&lt;&lt;set $statone to 50&gt;&gt;&lt;&lt;set $stattwo to 50&gt;&gt;\
+
 !Stats
 
 &lt;div class=&quot;stat-bar-group&quot;&gt;
 &lt;div class=&quot;stat-bar-container&quot;&gt;
-&lt;div class=&quot;stat-bar-overlay-left&quot;&gt;Stat One $statone%&lt;/div&gt;
-&lt;div class=&quot;stat-bar-overlay-right&quot;&gt;Stat Two $stattwo%&lt;/div&gt;
-&lt;div class=&quot;stat-bar&quot; id=&quot;statone-stat&quot;&gt;&lt;/div&gt;
-&lt;/div&gt;&lt;/div&gt;\
+        &lt;div class=&quot;stat-bar-overlay-left&quot;&gt;Stat One $statone%&lt;/div&gt;
+        &lt;div class=&quot;stat-bar-overlay-right&quot;&gt;Stat Two $stattwo%&lt;/div&gt;
+        &lt;div class=&quot;stat-bar&quot; id=&quot;statone-stat&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;\
 
 Make sure to tag the stats page (&amp; any similar pages) with &#39;noreturn&#39; and include a return link like the one below to avoid an infinite loop!
 
