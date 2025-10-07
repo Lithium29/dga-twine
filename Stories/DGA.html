@@ -1456,9 +1456,13 @@ $(document).on(':passagerender', function (event) {
     document.body.style.backgroundImage = 'url("img/wizard.jpg")'; //aktuell wird immer beim tag bild das BG auf Wizard geändert...
   }
 */
-  if (passageTags.includes('artuya')) {
+  if (passageTags.includes('pubquiz')) {
+    document.body.style.backgroundImage = 'url("img/artuyaQuizD.jpg")'; //wenn tag artuya bild artuya3
+  }
+  else if (passageTags.includes('artuya')) {
     document.body.style.backgroundImage = 'url("img/artuya3.jpg")'; //wenn tag artuya bild artuya3
-  }else {
+  }
+  else {
     document.body.style.backgroundImage = 'url("img/dgabdjungle4.jpg")';
   }
 
@@ -13862,7 +13866,7 @@ Ein riesiges Plakat verkündet Dir, dass die jetzige Show &quot;Traumland&quot; 
  &lt;img src=&quot;img/zirkus.jpg&quot; width=&quot;100%&quot;&gt;
 
 Der Geruch nach gebackenen Süßigkeiten, Popcorn und Zuckerwatte steigt Dir in die Nase, und Du bemerkst einen Snackwagen, in dem es auch heißen Tee gibt. 
-[[Weiter -&gt;beltonsplatzOptionen]]</tw-passagedata><tw-passagedata pid="1025" name="aufhaengerBar" tags="artuya  Bild" position="3525,10275" size="100,100">&lt;&lt;if ($pubquizGewonnen || $pubQuizGesperrt)&gt;&gt; 
+[[Weiter -&gt;beltonsplatzOptionen]]</tw-passagedata><tw-passagedata pid="1025" name="aufhaengerBar" tags="artuya Bild" position="3525,10275" size="100,100">&lt;&lt;if ($pubquizGewonnen || $pubQuizGesperrt)&gt;&gt; 
 &quot;Sorry, abgesagt&quot;, erklärt Dir der Barkeeper traurig, &quot;ein Student hat die Antworten ausspioniert, und wir machen erst in einem Monat ein neues Quiz.&quot; 
 [[Weiter -&gt;hellstrasseNB]]
 &lt;&lt;else&gt;&gt;
@@ -14647,13 +14651,13 @@ Gackernde Hühner sind noch weiter hinter dem Haus, aber Du siehst sie nicht, Du
 
 [[Du gehst zurück in die Stadt-&gt;grosseStrasseMW2]]
 
-</tw-passagedata><tw-passagedata pid="1105" name="pubquizBier" tags="artuya " position="3400,10275" size="100,100">&lt;&lt;set $gold-=1&gt;&gt; Du bezahlst ein Gold und erhältst einen Krug Bier, den Du genüsslich anfängst zu trinken, und der Dich angenehm erfrischt. &lt;&lt;set $leben+=1&gt;&gt;
+</tw-passagedata><tw-passagedata pid="1105" name="pubquizBier" tags="artuya pubquiz" position="3400,10275" size="100,100">&lt;&lt;set $gold-=1&gt;&gt; Du bezahlst ein Gold und erhältst einen Krug Bier, den Du genüsslich anfängst zu trinken, und der Dich angenehm erfrischt. &lt;&lt;set $leben+=1&gt;&gt;
 Du gewinnst 1 Leben! 
 
-[[Weiter -&gt;pubquiz]]</tw-passagedata><tw-passagedata pid="1106" name="pubquiz" tags="artuya " position="3250,10350" size="100,100">Willst Du beim Pubquiz mitmachen? Es ist umsonst, aber wird wahrscheinlich einige Zeit lang dauern. 
+[[Weiter -&gt;pubquiz]]</tw-passagedata><tw-passagedata pid="1106" name="pubquiz" tags="artuya pubquiz" position="3250,10350" size="100,100">Willst Du beim Pubquiz mitmachen? Es ist umsonst, aber wird wahrscheinlich einige Zeit lang dauern. 
 
 [[Du machst mit! -&gt;pubquizJa]]
-[[Du verlässt nach einiger Zeit die Bar und gehst zurück auf die Hellstraße -&gt;hellstrasseNB]]</tw-passagedata><tw-passagedata pid="1107" name="pubquizJa" tags="artuya " position="3250,10225" size="100,100">&quot;Meineeee Damen und Herreeeeeen!&quot; 
+[[Du verlässt nach einiger Zeit die Bar und gehst zurück auf die Hellstraße -&gt;hellstrasseNB]]</tw-passagedata><tw-passagedata pid="1107" name="pubquizJa" tags="artuya pubquiz" position="3250,10225" size="100,100">&quot;Meineeee Damen und Herreeeeeen!&quot; 
 
 Dem Barkeeper scheint das großen Spaß zu machen, 
 
@@ -14673,7 +14677,7 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 [[Weiter -&gt;quiz1]]
 
 &lt;&lt;set $score=1&gt;&gt;
-&lt;&lt;set $freibier=0&gt;&gt;</tw-passagedata><tw-passagedata pid="1108" name="quiz1" tags="artuya " position="3250,10100" size="100,100">Wer ist die Göttin der Fruchtbarkeit und guten Ernte?  
+&lt;&lt;set $freibier=0&gt;&gt;</tw-passagedata><tw-passagedata pid="1108" name="quiz1" tags="artuya pubquiz" position="3250,10100" size="100,100">Wer ist die Göttin der Fruchtbarkeit und guten Ernte?  
 
 [[Keldiras|quiz2][$score+=1]]
 
@@ -14681,7 +14685,7 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 
 [[Juhru -&gt;quiz2]]
 
-</tw-passagedata><tw-passagedata pid="1109" name="quiz2" tags="artuya " position="2975,9775" size="100,100">Wie heißt die Stadt der Zwerge?  
+</tw-passagedata><tw-passagedata pid="1109" name="quiz2" tags="artuya pubquiz" position="2975,9775" size="100,100">Wie heißt die Stadt der Zwerge?  
 
 [[Ereborn  -&gt;quiz3]]
 
@@ -14689,21 +14693,21 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 
 [[Erendon-&gt;quiz3]] 
 
-</tw-passagedata><tw-passagedata pid="1110" name="quiz3" tags="artuya " position="2975,9900" size="100,100">Bei welchem Monster sollte man sich nicht drei Mal umdrehen?  
+</tw-passagedata><tw-passagedata pid="1110" name="quiz3" tags="artuya pubquiz" position="2975,9900" size="100,100">Bei welchem Monster sollte man sich nicht drei Mal umdrehen?  
 
 [[Totenschreier -&gt;quiz4]]
 
 [[Ferae  -&gt;quiz4]]
 
 [[Dschungelstalker|quiz4][$score+=1]]
-</tw-passagedata><tw-passagedata pid="1111" name="quiz4" tags="artuya " position="2975,10025" size="100,100">Wie ist der Name der Hexe im Wald?  
+</tw-passagedata><tw-passagedata pid="1111" name="quiz4" tags="artuya pubquiz" position="2975,10025" size="100,100">Wie ist der Name der Hexe im Wald?  
 
 [[Thealinde   -&gt;quiz5]]
 
 [[Saltana   -&gt;quiz5]]
 
 [[Walfriede|quiz5][$score+=1]]
-</tw-passagedata><tw-passagedata pid="1112" name="quiz5" tags="artuya " position="2975,10150" size="100,100">&quot;Wie heißt die beste Kneipe in Artuya?&quot; Der Barkeeper lacht. &quot;Das war ein Scherz! Nun die richtige Frage: Wie heißt der Dschungel vor unserer Stadt?  
+</tw-passagedata><tw-passagedata pid="1112" name="quiz5" tags="artuya pubquiz" position="2975,10150" size="100,100">&quot;Wie heißt die beste Kneipe in Artuya?&quot; Der Barkeeper lacht. &quot;Das war ein Scherz! Nun die richtige Frage: Wie heißt der Dschungel vor unserer Stadt?  
 
 [[Phäudin - Dschungel -&gt;quiz6]]
 
@@ -14711,21 +14715,21 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 
 [[Thesiron - Dschungel-&gt;quiz6]]
  
-</tw-passagedata><tw-passagedata pid="1113" name="quiz6" tags="artuya " position="2975,10275" size="100,100">Name der Wüstenstadt?  
+</tw-passagedata><tw-passagedata pid="1113" name="quiz6" tags="artuya pubquiz" position="2975,10275" size="100,100">Name der Wüstenstadt?  
 
 [[Sabaya|quiz7][$score+=1]]
 
 [[Kultaya-&gt;quiz7]]  
 
 [[Al - Wadi-&gt;quiz7]]
-</tw-passagedata><tw-passagedata pid="1114" name="quiz7" tags="artuya " position="2975,10400" size="100,100">Welcher Zwergenkönig ist als Der Verschollene bekannt?  
+</tw-passagedata><tw-passagedata pid="1114" name="quiz7" tags="artuya pubquiz" position="2975,10400" size="100,100">Welcher Zwergenkönig ist als Der Verschollene bekannt?  
 
 [[König Jeobah-&gt;quiz8]]  
 
 [[König Orthan-&gt;quiz8]]
 
 [[König Brahand|quiz8][$score+=1]] 
-</tw-passagedata><tw-passagedata pid="1115" name="quiz8" tags="artuya " position="2850,9775" size="100,100">Die drei Prinzipien des Kreises:  
+</tw-passagedata><tw-passagedata pid="1115" name="quiz8" tags="artuya pubquiz" position="2850,9775" size="100,100">Die drei Prinzipien des Kreises:  
 
 [[Ewigkeit, Einheit, Reichtum|quiz9][$score+=1]] 
 
@@ -14733,14 +14737,14 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 
 [[Ewigkeit, Reichtum, Macht-&gt;quiz9]] 
 
-</tw-passagedata><tw-passagedata pid="1116" name="quiz9" tags="artuya " position="2850,9900" size="100,100">Wie heißen die drei großen Götter der Fruchtbarkeit, des Himmels und der Erde, und des Kriegs?  
+</tw-passagedata><tw-passagedata pid="1116" name="quiz9" tags="artuya pubquiz" position="2850,9900" size="100,100">Wie heißen die drei großen Götter der Fruchtbarkeit, des Himmels und der Erde, und des Kriegs?  
 
 [[Keldiras, Jortan, Balero  -&gt;quiz10]]   
 
 [[Keldira, Juhru, Bellum  -&gt;quiz10]]   
 
 [[Keldiras, Juhru, Belton|quiz10][$score+=1]] 
-</tw-passagedata><tw-passagedata pid="1117" name="quiz10" tags="artuya " position="2850,10025" size="100,100">Frage Nummer 10! Die Hälfte ist geschafft! Wie heißt die älteste bekannte Hochzivilisation  
+</tw-passagedata><tw-passagedata pid="1117" name="quiz10" tags="artuya pubquiz" position="2850,10025" size="100,100">Frage Nummer 10! Die Hälfte ist geschafft! Wie heißt die älteste bekannte Hochzivilisation  
 
 [[Die Zivilsation der Altherer|quiz11][$score+=1]]   
 
@@ -14750,7 +14754,7 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 
 [[Du hast keine Lust mehr und gehst.-&gt;hellstrasseNB]]
  
-</tw-passagedata><tw-passagedata pid="1118" name="quiz11" tags="artuya " position="2850,10150" size="100,100">Wie viele Tore hat die Stadt Artuya?  
+</tw-passagedata><tw-passagedata pid="1118" name="quiz11" tags="artuya pubquiz" position="2850,10150" size="100,100">Wie viele Tore hat die Stadt Artuya?  
 
 [[Drei  -&gt;quiz12]]   
 
@@ -14758,28 +14762,28 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 
 [[Fünf-&gt;quiz12]]   
  
-</tw-passagedata><tw-passagedata pid="1119" name="quiz12" tags="artuya " position="2850,10275" size="100,100">Ein berühmter Eremit und Weiser unserer Zeit heißt  
+</tw-passagedata><tw-passagedata pid="1119" name="quiz12" tags="artuya pubquiz" position="2850,10275" size="100,100">Ein berühmter Eremit und Weiser unserer Zeit heißt  
 
 [[Slathyros -&gt;quiz13]]    
 
 [[Orthenon|quiz13][$score+=1]]  
 
 [[Bentradi-&gt;quiz13]]
-</tw-passagedata><tw-passagedata pid="1120" name="quiz13" tags="artuya " position="2850,10400" size="100,100">Gesucht ist der Name eines verbotenen Krauts, das beim Rauchen einen halluzinogenen Effekt hervorruft  
+</tw-passagedata><tw-passagedata pid="1120" name="quiz13" tags="artuya pubquiz" position="2850,10400" size="100,100">Gesucht ist der Name eines verbotenen Krauts, das beim Rauchen einen halluzinogenen Effekt hervorruft  
 
 [[Wunderblume-&gt;quiz14]]      
 
 [[Narko-Kraut-&gt;quiz14]]      
 
 [[Traumblatt|quiz14][$score+=1]]  
-</tw-passagedata><tw-passagedata pid="1121" name="quiz14" tags="artuya " position="2725,9775" size="100,100">Der Name unseres verehrten Bürgermeisters lautet:  
+</tw-passagedata><tw-passagedata pid="1121" name="quiz14" tags="artuya pubquiz" position="2725,9775" size="100,100">Der Name unseres verehrten Bürgermeisters lautet:  
 
 [[Fluck  -&gt;quiz15]]      
 
 [[Teurer|quiz15][$score+=1]]  
 
 [[Truck -&gt;quiz15]]      
-</tw-passagedata><tw-passagedata pid="1122" name="quiz15" tags="artuya " position="2725,9900" size="100,100">Was sollte man tun, wenn man einem Geschöpf der Ferae begegnet?  
+</tw-passagedata><tw-passagedata pid="1122" name="quiz15" tags="artuya pubquiz" position="2725,9900" size="100,100">Was sollte man tun, wenn man einem Geschöpf der Ferae begegnet?  
 
 [[Singen  -&gt;quiz16]]   
 
@@ -14789,14 +14793,14 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 
 [[Puh. Du kannst nicht mehr, und gehst lieber.-&gt;hellstrasseNB]]
 
-</tw-passagedata><tw-passagedata pid="1123" name="quiz16" tags="artuya " position="2725,10025" size="100,100">Wie heißen die beiden wichtigsten Straßen in Artuya?  /*TODO Karte sperren*/ 
+</tw-passagedata><tw-passagedata pid="1123" name="quiz16" tags="artuya pubquiz" position="2725,10025" size="100,100">Wie heißen die beiden wichtigsten Straßen in Artuya?  /*TODO Karte sperren*/ 
 
 [[Marktstraße und Hauptstraße -&gt;quiz17]]   
 
 [[Hauptstraße und Große Straße|quiz17][$score+=1]]   
 
 [[Große Straße und Marktstraße -&gt;quiz17]]
-</tw-passagedata><tw-passagedata pid="1124" name="quiz17" tags="artuya " position="2725,10150" size="100,100">Außer Kerzen ist eine beliebte Beleuchtungsstrategie einiger Läden  
+</tw-passagedata><tw-passagedata pid="1124" name="quiz17" tags="artuya pubquiz" position="2725,10150" size="100,100">Außer Kerzen ist eine beliebte Beleuchtungsstrategie einiger Läden  
 
 [[Leuchtkäfer   -&gt;quiz18]]
 
@@ -14804,26 +14808,26 @@ Nochmalig johlen und schreien einige Gäste begeistert, während andere mit ihre
 
 [[Magische Kristalle  -&gt;quiz18]]
 
-</tw-passagedata><tw-passagedata pid="1125" name="quiz18" tags="artuya " position="2725,10275" size="100,100">Wie heißt der Fluss südlich von Artuya  
+</tw-passagedata><tw-passagedata pid="1125" name="quiz18" tags="artuya pubquiz" position="2725,10275" size="100,100">Wie heißt der Fluss südlich von Artuya  
 
 [[Die Bellelle  -&gt;quiz19]] 
 
 [[Die Lauzer    -&gt;quiz19]]
 
 [[Die Belavier|quiz19][$score+=1]]
-</tw-passagedata><tw-passagedata pid="1126" name="quiz19" tags="artuya " position="2725,10400" size="100,100">Welches Artefakt der Altherer ist im Besitz des Kreises?  
+</tw-passagedata><tw-passagedata pid="1126" name="quiz19" tags="artuya pubquiz" position="2725,10400" size="100,100">Welches Artefakt der Altherer ist im Besitz des Kreises?  
 
 [[Der Ring -&gt;quiz20]]   
 
 [[Der Spiegel|quiz20][$score+=1]] 
 
-[[Das Schwert -&gt;quiz20]]</tw-passagedata><tw-passagedata pid="1127" name="quiz20" tags="artuya " position="2600,9775" size="100,100">Letzte Frage!  Der Name dieser Bar, der besten Bar Artuyas lauteeet:  
+[[Das Schwert -&gt;quiz20]]</tw-passagedata><tw-passagedata pid="1127" name="quiz20" tags="artuya pubquiz" position="2600,9775" size="100,100">Letzte Frage!  Der Name dieser Bar, der besten Bar Artuyas lauteeet:  
 [[Der Anknüpfer-&gt;quizEnde]]  
 
 [[Die Schlinge-&gt;quizEnde]]    
 
 [[Der Aufhänger|quizEnde][$score+=1]] 
-</tw-passagedata><tw-passagedata pid="1128" name="quizEnde" tags="artuya Achiev" position="2600,9900" size="100,100">&lt;&lt;if ($score == 20)&gt;&gt; &lt;&lt;set $pubquizGewonnen=true&gt;&gt; 
+</tw-passagedata><tw-passagedata pid="1128" name="quizEnde" tags="artuya Achiev pubquiz" position="2600,9900" size="100,100">&lt;&lt;if ($score == 20)&gt;&gt; &lt;&lt;set $pubquizGewonnen=true&gt;&gt; 
 &lt;&lt;run $achievements.push(&#39;Quizkönig&#39;)&gt;&gt;
 &quot;Wir haben eineeeeen Gewinner! 20 Gold für perrrrrfekte Antworten! Einen Applaus bitte!&quot; 
 
